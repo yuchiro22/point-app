@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		50F5148F264B47D700426365 /* point_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5148E264B47D700426365 /* point_appApp.swift */; };
-		50F51491264B47D700426365 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F51490264B47D700426365 /* ContentView.swift */; };
+		50F51491264B47D700426365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F51490264B47D700426365 /* HomeView.swift */; };
 		50F51493264B47D900426365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F51492264B47D900426365 /* Assets.xcassets */; };
 		50F51496264B47D900426365 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F51495264B47D900426365 /* Preview Assets.xcassets */; };
 		50F514A1264B47DA00426365 /* point_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514A0264B47DA00426365 /* point_appTests.swift */; };
 		50F514AC264B47DA00426365 /* point_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514AB264B47DA00426365 /* point_appUITests.swift */; };
+		50F514C4264B49EB00426365 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C3264B49EB00426365 /* StampView.swift */; };
+		50F514CA264B4A4000426365 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C9264B4A4000426365 /* RootTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		50F5148B264B47D700426365 /* point-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "point-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F5148E264B47D700426365 /* point_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = point_appApp.swift; sourceTree = "<group>"; };
-		50F51490264B47D700426365 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		50F51490264B47D700426365 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		50F51492264B47D900426365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50F51495264B47D900426365 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50F51497264B47D900426365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		50F514A7264B47DA00426365 /* point-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "point-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F514AB264B47DA00426365 /* point_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = point_appUITests.swift; sourceTree = "<group>"; };
 		50F514AD264B47DA00426365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50F514C3264B49EB00426365 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = SOURCE_ROOT; };
+		50F514C9264B4A4000426365 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,12 @@
 		50F5148D264B47D700426365 /* point-app */ = {
 			isa = PBXGroup;
 			children = (
+				50F514C8264B4A3300426365 /* RootTab */,
+				50F514C2264B49B300426365 /* Information */,
+				50F514C1264B49A900426365 /* Coupon */,
+				50F514C0264B499900426365 /* Stamp */,
+				50F514BF264B499200426365 /* Home */,
 				50F5148E264B47D700426365 /* point_appApp.swift */,
-				50F51490264B47D700426365 /* ContentView.swift */,
 				50F51492264B47D900426365 /* Assets.xcassets */,
 				50F51497264B47D900426365 /* Info.plist */,
 				50F51494264B47D900426365 /* Preview Content */,
@@ -128,6 +136,44 @@
 				50F514AD264B47DA00426365 /* Info.plist */,
 			);
 			path = "point-appUITests";
+			sourceTree = "<group>";
+		};
+		50F514BF264B499200426365 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				50F51490264B47D700426365 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		50F514C0264B499900426365 /* Stamp */ = {
+			isa = PBXGroup;
+			children = (
+				50F514C3264B49EB00426365 /* StampView.swift */,
+			);
+			path = Stamp;
+			sourceTree = "<group>";
+		};
+		50F514C1264B49A900426365 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
+		50F514C2264B49B300426365 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		50F514C8264B4A3300426365 /* RootTab */ = {
+			isa = PBXGroup;
+			children = (
+				50F514C9264B4A4000426365 /* RootTabView.swift */,
+			);
+			path = RootTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50F51491264B47D700426365 /* ContentView.swift in Sources */,
+				50F51491264B47D700426365 /* HomeView.swift in Sources */,
 				50F5148F264B47D700426365 /* point_appApp.swift in Sources */,
+				50F514CA264B4A4000426365 /* RootTabView.swift in Sources */,
+				50F514C4264B49EB00426365 /* StampView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
