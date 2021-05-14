@@ -17,6 +17,8 @@
 		50F514AC264B47DA00426365 /* point_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514AB264B47DA00426365 /* point_appUITests.swift */; };
 		50F514C4264B49EB00426365 /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C3264B49EB00426365 /* StampView.swift */; };
 		50F514CA264B4A4000426365 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514C9264B4A4000426365 /* RootTabView.swift */; };
+		50F514D6264EC2A500426365 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514D5264EC2A500426365 /* Announcement.swift */; };
+		50F514DE264EC40400426365 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F514DD264EC40400426365 /* HomeContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		50F514AD264B47DA00426365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F514C3264B49EB00426365 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = SOURCE_ROOT; };
 		50F514C9264B4A4000426365 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		50F514D5264EC2A500426365 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
+		50F514DD264EC40400426365 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 		50F5148D264B47D700426365 /* point-app */ = {
 			isa = PBXGroup;
 			children = (
+				50F514D4264EC24500426365 /* Model */,
 				509F814F264E9FBE00831EF7 /* Coupon */,
 				509F8149264E9FB100831EF7 /* Information */,
 				50F514C8264B4A3300426365 /* RootTab */,
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				50F51490264B47D700426365 /* HomeView.swift */,
+				50F514DD264EC40400426365 /* HomeContentView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -180,6 +186,14 @@
 				50F514C9264B4A4000426365 /* RootTabView.swift */,
 			);
 			path = RootTab;
+			sourceTree = "<group>";
+		};
+		50F514D4264EC24500426365 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50F514D5264EC2A500426365 /* Announcement.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +329,10 @@
 				509F814B264E9FB900831EF7 /* InformationView.swift in Sources */,
 				50F51491264B47D700426365 /* HomeView.swift in Sources */,
 				50F5148F264B47D700426365 /* point_appApp.swift in Sources */,
+				50F514D6264EC2A500426365 /* Announcement.swift in Sources */,
 				50F514CA264B4A4000426365 /* RootTabView.swift in Sources */,
 				50F514C4264B49EB00426365 /* StampView.swift in Sources */,
+				50F514DE264EC40400426365 /* HomeContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
