@@ -2,8 +2,10 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("ホーム画面")
-            .padding()
+        NavigationView {
+            Text("ホーム画面")
+                .padding()
+        }
     }
 }
 

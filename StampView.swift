@@ -2,7 +2,9 @@ import SwiftUI
 
 struct StampView: View {
     var body: some View {
-        Text("スタンプ画面")
+        NavigationView {
+            Text("スタンプ画面")
+        }
     }
 }
 

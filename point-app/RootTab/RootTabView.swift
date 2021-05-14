@@ -1,22 +1,42 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @State private var selectedTab = 0
+    let minDragTranslationForSwipe: CGFloat = 50
+    let numTabs = 2
+
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             HomeView()
                 .tabItem {
                     VStack {
                         Image(systemName: "a")
                         Text("ホーム")
                     }
-                }.tag(1)
+                }
+                .tag(0)
+                .highPriorityGesture(DragGesture().onEnded({
+                    self.handleSwipe(translation: $0.translation.width)
+                }))
             StampView()
                 .tabItem {
                     VStack {
                         Image(systemName: "bold")
                         Text("スタンプ")
                     }
-                }.tag(2)
+                }
+                .tag(1)
+                .highPriorityGesture(DragGesture().onEnded({
+                    self.handleSwipe(translation: $0.translation.width)
+                }))
+        }
+    }
+
+    private func handleSwipe(translation: CGFloat) {
+        if translation > minDragTranslationForSwipe && selectedTab > 0 {
+            selectedTab -= 1
+        } else  if translation < -minDragTranslationForSwipe && selectedTab < numTabs-1 {
+            selectedTab += 1
         }
     }
 }
