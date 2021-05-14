@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		509F814B264E9FB900831EF7 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F814A264E9FB900831EF7 /* InformationView.swift */; };
+		509F8151264E9FC900831EF7 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F8150264E9FC900831EF7 /* CouponView.swift */; };
 		50F5148F264B47D700426365 /* point_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5148E264B47D700426365 /* point_appApp.swift */; };
 		50F51491264B47D700426365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F51490264B47D700426365 /* HomeView.swift */; };
 		50F51493264B47D900426365 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F51492264B47D900426365 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		509F814A264E9FB900831EF7 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		509F8150264E9FC900831EF7 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
 		50F5148B264B47D700426365 /* point-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "point-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F5148E264B47D700426365 /* point_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = point_appApp.swift; sourceTree = "<group>"; };
 		50F51490264B47D700426365 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		509F8149264E9FB100831EF7 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				509F814A264E9FB900831EF7 /* InformationView.swift */,
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		509F814F264E9FBE00831EF7 /* Coupon */ = {
+			isa = PBXGroup;
+			children = (
+				509F8150264E9FC900831EF7 /* CouponView.swift */,
+			);
+			path = Coupon;
+			sourceTree = "<group>";
+		};
 		50F51482264B47D700426365 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +119,9 @@
 		50F5148D264B47D700426365 /* point-app */ = {
 			isa = PBXGroup;
 			children = (
+				509F814F264E9FBE00831EF7 /* Coupon */,
+				509F8149264E9FB100831EF7 /* Information */,
 				50F514C8264B4A3300426365 /* RootTab */,
-				50F514C2264B49B300426365 /* Information */,
-				50F514C1264B49A900426365 /* Coupon */,
 				50F514C0264B499900426365 /* Stamp */,
 				50F514BF264B499200426365 /* Home */,
 				50F5148E264B47D700426365 /* point_appApp.swift */,
@@ -152,20 +172,6 @@
 				50F514C3264B49EB00426365 /* StampView.swift */,
 			);
 			path = Stamp;
-			sourceTree = "<group>";
-		};
-		50F514C1264B49A900426365 /* Coupon */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coupon;
-			sourceTree = "<group>";
-		};
-		50F514C2264B49B300426365 /* Information */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Information;
 			sourceTree = "<group>";
 		};
 		50F514C8264B4A3300426365 /* RootTab */ = {
@@ -305,6 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509F8151264E9FC900831EF7 /* CouponView.swift in Sources */,
+				509F814B264E9FB900831EF7 /* InformationView.swift in Sources */,
 				50F51491264B47D700426365 /* HomeView.swift in Sources */,
 				50F5148F264B47D700426365 /* point_appApp.swift in Sources */,
 				50F514CA264B4A4000426365 /* RootTabView.swift in Sources */,

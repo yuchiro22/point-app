@@ -3,7 +3,7 @@ import SwiftUI
 struct RootTabView: View {
     @State private var selectedTab = 0
     let minDragTranslationForSwipe: CGFloat = 50
-    let numTabs = 2
+    let numTabs = 4
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -26,6 +26,28 @@ struct RootTabView: View {
                     }
                 }
                 .tag(1)
+                .highPriorityGesture(DragGesture().onEnded({
+                    self.handleSwipe(translation: $0.translation.width)
+                }))
+            CouponView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "bold")
+                        Text("クーポン")
+                    }
+                }
+                .tag(2)
+                .highPriorityGesture(DragGesture().onEnded({
+                    self.handleSwipe(translation: $0.translation.width)
+                }))
+            InformationView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "bold")
+                        Text("店舗情報")
+                    }
+                }
+                .tag(3)
                 .highPriorityGesture(DragGesture().onEnded({
                     self.handleSwipe(translation: $0.translation.width)
                 }))
