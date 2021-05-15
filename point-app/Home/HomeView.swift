@@ -8,7 +8,6 @@ struct HomeView: View {
             List(announcements.indices) { index in
                 HomeContentView(announcement: self.$announcements[index])
             }
-            .padding(EdgeInsets(top: 44, leading: 0, bottom: 24, trailing: 0))
         }
     }
 }
