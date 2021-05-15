@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		509F814B264E9FB900831EF7 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F814A264E9FB900831EF7 /* InformationView.swift */; };
+		501BA379264FD1DD00643000 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA378264FD1DD00643000 /* Store.swift */; };
+		501BA384264FD42A00643000 /* StoreInformationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA383264FD42A00643000 /* StoreInformationContentView.swift */; };
+		509F814B264E9FB900831EF7 /* StoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F814A264E9FB900831EF7 /* StoreInformationView.swift */; };
 		509F8151264E9FC900831EF7 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F8150264E9FC900831EF7 /* CouponView.swift */; };
 		50F5148F264B47D700426365 /* point_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5148E264B47D700426365 /* point_appApp.swift */; };
 		50F51491264B47D700426365 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F51490264B47D700426365 /* HomeView.swift */; };
@@ -39,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		509F814A264E9FB900831EF7 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		501BA378264FD1DD00643000 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		501BA383264FD42A00643000 /* StoreInformationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInformationContentView.swift; sourceTree = "<group>"; };
+		509F814A264E9FB900831EF7 /* StoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInformationView.swift; sourceTree = "<group>"; };
 		509F8150264E9FC900831EF7 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
 		50F5148B264B47D700426365 /* point-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "point-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F5148E264B47D700426365 /* point_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = point_appApp.swift; sourceTree = "<group>"; };
@@ -84,12 +88,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		509F8149264E9FB100831EF7 /* Information */ = {
+		509F8149264E9FB100831EF7 /* StoreInformation */ = {
 			isa = PBXGroup;
 			children = (
-				509F814A264E9FB900831EF7 /* InformationView.swift */,
+				509F814A264E9FB900831EF7 /* StoreInformationView.swift */,
+				501BA383264FD42A00643000 /* StoreInformationContentView.swift */,
 			);
-			path = Information;
+			path = StoreInformation;
 			sourceTree = "<group>";
 		};
 		509F814F264E9FBE00831EF7 /* Coupon */ = {
@@ -125,7 +130,7 @@
 			children = (
 				50F514D4264EC24500426365 /* Model */,
 				509F814F264E9FBE00831EF7 /* Coupon */,
-				509F8149264E9FB100831EF7 /* Information */,
+				509F8149264E9FB100831EF7 /* StoreInformation */,
 				50F514C8264B4A3300426365 /* RootTab */,
 				50F514C0264B499900426365 /* Stamp */,
 				50F514BF264B499200426365 /* Home */,
@@ -192,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				50F514D5264EC2A500426365 /* Announcement.swift */,
+				501BA378264FD1DD00643000 /* Store.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,8 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				509F8151264E9FC900831EF7 /* CouponView.swift in Sources */,
-				509F814B264E9FB900831EF7 /* InformationView.swift in Sources */,
+				509F814B264E9FB900831EF7 /* StoreInformationView.swift in Sources */,
 				50F51491264B47D700426365 /* HomeView.swift in Sources */,
+				501BA384264FD42A00643000 /* StoreInformationContentView.swift in Sources */,
+				501BA379264FD1DD00643000 /* Store.swift in Sources */,
 				50F5148F264B47D700426365 /* point_appApp.swift in Sources */,
 				50F514D6264EC2A500426365 /* Announcement.swift in Sources */,
 				50F514CA264B4A4000426365 /* RootTabView.swift in Sources */,
