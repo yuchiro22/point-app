@@ -29,7 +29,7 @@ struct RootTabView: View {
                 .highPriorityGesture(DragGesture().onEnded({
                     self.handleSwipe(translation: $0.translation.width)
                 }))
-            CouponView()
+            CouponView(couponList: Coupon.mockData)
                 .tabItem {
                     VStack {
                         Image(systemName: "bold")

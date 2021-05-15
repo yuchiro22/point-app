@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		501BA379264FD1DD00643000 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA378264FD1DD00643000 /* Store.swift */; };
 		501BA384264FD42A00643000 /* StoreInformationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA383264FD42A00643000 /* StoreInformationContentView.swift */; };
+		501BA389264FF51700643000 /* Coupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA388264FF51700643000 /* Coupon.swift */; };
+		501BA38E264FF5D400643000 /* CouponContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501BA38D264FF5D400643000 /* CouponContentView.swift */; };
 		509F814B264E9FB900831EF7 /* StoreInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F814A264E9FB900831EF7 /* StoreInformationView.swift */; };
 		509F8151264E9FC900831EF7 /* CouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509F8150264E9FC900831EF7 /* CouponView.swift */; };
 		50F5148F264B47D700426365 /* point_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F5148E264B47D700426365 /* point_appApp.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		501BA378264FD1DD00643000 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		501BA383264FD42A00643000 /* StoreInformationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInformationContentView.swift; sourceTree = "<group>"; };
+		501BA388264FF51700643000 /* Coupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coupon.swift; sourceTree = "<group>"; };
+		501BA38D264FF5D400643000 /* CouponContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponContentView.swift; sourceTree = "<group>"; };
 		509F814A264E9FB900831EF7 /* StoreInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInformationView.swift; sourceTree = "<group>"; };
 		509F8150264E9FC900831EF7 /* CouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponView.swift; sourceTree = "<group>"; };
 		50F5148B264B47D700426365 /* point-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "point-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				509F8150264E9FC900831EF7 /* CouponView.swift */,
+				501BA38D264FF5D400643000 /* CouponContentView.swift */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			children = (
 				50F514D5264EC2A500426365 /* Announcement.swift */,
 				501BA378264FD1DD00643000 /* Store.swift */,
+				501BA388264FF51700643000 /* Coupon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,8 +342,10 @@
 				50F51491264B47D700426365 /* HomeView.swift in Sources */,
 				501BA384264FD42A00643000 /* StoreInformationContentView.swift in Sources */,
 				501BA379264FD1DD00643000 /* Store.swift in Sources */,
+				501BA389264FF51700643000 /* Coupon.swift in Sources */,
 				50F5148F264B47D700426365 /* point_appApp.swift in Sources */,
 				50F514D6264EC2A500426365 /* Announcement.swift in Sources */,
+				501BA38E264FF5D400643000 /* CouponContentView.swift in Sources */,
 				50F514CA264B4A4000426365 /* RootTabView.swift in Sources */,
 				50F514C4264B49EB00426365 /* StampView.swift in Sources */,
 				50F514DE264EC40400426365 /* HomeContentView.swift in Sources */,
