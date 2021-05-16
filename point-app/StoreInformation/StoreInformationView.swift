@@ -8,6 +8,9 @@ struct StoreInformationView: View {
                 StoreInformationContentView(storeInfomation: self.$storeInformation[index])
                 //HomeContentView(announcement: self.$announcements[index])
             }
+            .onAppear() {
+                UITableView.appearance().backgroundColor = UIColor(named: "background")
+            }
         }
     }
 }

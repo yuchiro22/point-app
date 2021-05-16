@@ -11,7 +11,7 @@ struct CouponView: View {
                     CouponContentView(coupon: self.$couponList[index])
                 }
             }
-            .background(Color.gray)
+            .background(Color("background"))
             .navigationBarTitle("クーポン", displayMode: .inline)
         }
     }

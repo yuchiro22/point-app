@@ -5,7 +5,7 @@ struct CouponContentView: View {
     
     var body: some View {
         ZStack {
-            Color.blue
+            Color("primary")
                 .cornerRadius(12)
             Color.white
                 .offset(x: 12, y: 0)

@@ -8,6 +8,9 @@ struct HomeView: View {
             List(announcements.indices) { index in
                 HomeContentView(announcement: self.$announcements[index])
             }
+            .onAppear() {
+                UITableView.appearance().backgroundColor = UIColor(named: "background")
+            }
         }
     }
 }

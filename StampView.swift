@@ -3,8 +3,12 @@ import SwiftUI
 struct StampView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                Text("QRコード")
+            VStack {
+                Spacer()
+                    .frame(height: 16)
+                Image("qr_example")
+                    .frame(width: 200, height: 200)
+                Spacer()
                 Button(action: {
                     
                 }) {
@@ -76,16 +80,17 @@ struct StampView: View {
                     
                 }) {
                     ZStack {
-                        Color.green
+                        Color("primary")
                             .cornerRadius(6)
                         Text("クーポンに引き換える")
                             .foregroundColor(.white)
                             .padding()
                     }
+                    .frame(height: 48)
                     .padding()
                 }
             }
-            .background(Color.gray)
+            .background(Color("background"))
             .navigationBarTitle("スタンプカード", displayMode: .inline)
         }
     }
