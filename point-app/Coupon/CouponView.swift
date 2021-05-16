@@ -9,6 +9,7 @@ struct CouponView: View {
                 ForEach(couponList.indices) { index in
                     Spacer()
                     CouponContentView(coupon: self.$couponList[index])
+                        .padding(.horizontal, 16)
                 }
             }
             .background(Color("background"))

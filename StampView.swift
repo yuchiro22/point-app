@@ -5,8 +5,8 @@ struct StampView: View {
         NavigationView {
             VStack {
                 Spacer()
-                    .frame(height: 16)
                 Image("qr_example")
+                    .resizable()
                     .frame(width: 200, height: 200)
                 Spacer()
                 Button(action: {
@@ -27,13 +27,12 @@ struct StampView: View {
                                             )
                                         )
                                         .foregroundColor(.gray)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 48, height: 48)
                                     Spacer()
                                 }
                             }
-                            .padding(.horizontal, 12)
-                            Spacer()
-                                .frame(height: 12)
+                            .padding(.horizontal, 28)
+                            Spacer().frame(height: 10)
                             HStack {
                                 ForEach((1...5), id: \.self) { index in
                                     Circle()
@@ -44,24 +43,26 @@ struct StampView: View {
                                             )
                                         )
                                         .foregroundColor(.gray)
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 48, height: 48)
                                     Spacer()
                                 }
                             }
-                            .padding(.horizontal, 12)
+                            .padding(.horizontal, 28)
                             Divider()
-                                .padding(.all, 6)
+                                .padding(.top, 16)
+                                .padding(.bottom, 10)
                             HStack {
                                 Text("ご来店10回で")
-                                    .font(.system(size: 12))
+                                    .font(.system(size: 10))
                                     .foregroundColor(.gray)
                                 Spacer()
                             }
+                            .padding(.bottom, 2)
                             HStack {
                                 Text("コーヒー1杯無料")
-                                    .font(.system(size: 16))
-                                    .foregroundColor(.black)
-                                    .padding(.vertical, 1)
+                                    .font(.system(size: 14))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color("text_base"))
                                 Spacer()
                             }
                             HStack {
@@ -70,12 +71,14 @@ struct StampView: View {
                                     .foregroundColor(.gray)
                                 Spacer()
                             }
+                            .padding(.top, 6)
                         }
-                        .padding()
+                        .padding(.all, 16)
                     }
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, 16)
                     .fixedSize(horizontal: false, vertical: true)
                 }
+                Spacer().frame(height: 24)
                 Button(action: {
                     
                 }) {
@@ -84,11 +87,14 @@ struct StampView: View {
                             .cornerRadius(6)
                         Text("クーポンに引き換える")
                             .foregroundColor(.white)
-                            .padding()
+                            .font(.system(size: 14))
+                            .fontWeight(.bold)
+                            .padding(.vertical, 14)
                     }
                     .frame(height: 48)
-                    .padding()
+                    .padding(.horizontal, 16)
                 }
+                Spacer().frame(height: 20)
             }
             .background(Color("background"))
             .navigationBarTitle("スタンプカード", displayMode: .inline)
