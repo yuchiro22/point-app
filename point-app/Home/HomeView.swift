@@ -5,11 +5,18 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            List(announcements.indices) { index in
-                HomeContentView(announcement: self.$announcements[index])
+            ScrollView(.vertical, showsIndicators: true) {
+                ForEach(announcements.indices) { index in
+                    HomeContentView(announcement: self.$announcements[index])
+                        .padding()
+                }
             }
-            .onAppear() {
-                UITableView.appearance().backgroundColor = UIColor(named: "background")
+            .background(Color("background"))
+            .navigationBarTitle("", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Image("logo")
+                }
             }
         }
     }

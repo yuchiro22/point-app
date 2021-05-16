@@ -4,6 +4,10 @@ struct RootTabView: View {
     @State private var selectedTab = 0
     let minDragTranslationForSwipe: CGFloat = 50
     let numTabs = 4
+    
+    init() {
+        UITabBar.appearance().backgroundColor = .white
+    }
 
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -51,9 +55,6 @@ struct RootTabView: View {
                 .highPriorityGesture(DragGesture().onEnded({
                     self.handleSwipe(translation: $0.translation.width)
                 }))
-        }
-        .onAppear() {
-            
         }
         .accentColor(Color("primary"))
     }

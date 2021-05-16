@@ -11,6 +11,7 @@ struct StoreInformationView: View {
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor(named: "background")
             }
+            .navigationBarTitle("店舗情報", displayMode: .inline)
         }
     }
 }

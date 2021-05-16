@@ -12,7 +12,7 @@ struct CouponView: View {
                 }
             }
             .background(Color("background"))
-            .navigationBarTitle("クーポン", displayMode: .inline)
+            .navigationBarTitle("クーポン一覧", displayMode: .inline)
         }
     }
 }
