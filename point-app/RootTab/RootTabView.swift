@@ -10,7 +10,7 @@ struct RootTabView: View {
             HomeView(announcements: Announcement.mockData)
                 .tabItem {
                     VStack {
-                        Image(systemName: "a")
+                        Image("tab_home")
                         Text("ホーム")
                     }
                 }
@@ -21,7 +21,7 @@ struct RootTabView: View {
             StampView()
                 .tabItem {
                     VStack {
-                        Image(systemName: "bold")
+                        Image("tab_stamp")
                         Text("スタンプ")
                     }
                 }
@@ -32,7 +32,7 @@ struct RootTabView: View {
             CouponView(couponList: Coupon.mockData)
                 .tabItem {
                     VStack {
-                        Image(systemName: "bold")
+                        Image("tab_coupon")
                         Text("クーポン")
                     }
                 }
@@ -43,7 +43,7 @@ struct RootTabView: View {
             StoreInformationView(storeInformation: Store.mockData)
                 .tabItem {
                     VStack {
-                        Image(systemName: "bold")
+                        Image("tab_store_information")
                         Text("店舗情報")
                     }
                 }
@@ -52,6 +52,10 @@ struct RootTabView: View {
                     self.handleSwipe(translation: $0.translation.width)
                 }))
         }
+        .onAppear() {
+            
+        }
+        .accentColor(Color("primary"))
     }
 
     private func handleSwipe(translation: CGFloat) {
