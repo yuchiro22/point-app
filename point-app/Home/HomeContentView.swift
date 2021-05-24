@@ -4,11 +4,9 @@ struct HomeContentView: View {
     @Binding var announcement: Announcement
     
     var body: some View {
-        ZStack {
-            Color.white
-            Button(action: {
-                
-            }) {
+        NavigationLink(destination: AnnouncementView(announcement: $announcement)) {
+            ZStack {
+                Color.white
                 VStack {
                     Image(announcement.imageUrl)
                         .resizable()
@@ -52,7 +50,9 @@ struct HomeContentView: View {
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
         .fixedSize(horizontal: false, vertical: true)
+        
     }
+    
 }
 
 struct HomeContentView_Preview: PreviewProvider {
