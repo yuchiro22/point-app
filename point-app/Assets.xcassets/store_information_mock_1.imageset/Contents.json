@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "qiming-chen-lzCH2_8qRH8-unsplash.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "qiming-chen-lzCH2_8qRH8-unsplash@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "qiming-chen-lzCH2_8qRH8-unsplash@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
