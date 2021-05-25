@@ -5,7 +5,6 @@ struct CouponDetailView: View {
     
     var body: some View {
         VStack {
-            
                 Image(coupon.imagePath)
                     .resizable()
                     .scaledToFill()
@@ -71,6 +70,7 @@ struct CouponDetailView: View {
             }
         }
         .background(Color("background"))
+        .navigationTitle("クーポン")
     }
 }
 

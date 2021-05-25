@@ -18,14 +18,15 @@ struct CouponContentView: View {
                         Text(coupon.title)
                             .font(.system(size: 14))
                             .fontWeight(.bold)
+                            .foregroundColor(Color("text_base"))
                         Spacer().frame(height: 4)
                         HStack {
                             Image(systemName: "clock")
                                 .resizable()
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color("text_second"))
                                 .frame(width: 10, height: 10, alignment: .center)
                             Text("\(coupon.expiredDateStr)まで有効")
-                                .foregroundColor(.gray)
+                                .foregroundColor(Color("text_second"))
                                 .font(.system(size: 10))
                         }
                         Spacer().frame(height: 48)

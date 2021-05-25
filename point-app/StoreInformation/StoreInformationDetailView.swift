@@ -36,7 +36,6 @@ struct StoreInformationDetailView: View {
             .scaledToFit()
             .frame(height: 228)
             .clipped()
-            .padding(.horizontal, 16)
         Spacer()
             .frame(height: 20)
         Group {
@@ -135,6 +134,7 @@ struct StoreInformationDetailView: View {
         }
         .padding(.horizontal, 16)
         Spacer()
+            .navigationTitle("店舗情報")
     }
 }
 
