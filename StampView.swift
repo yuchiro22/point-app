@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct StampView: View {
+    @ObservedObject private var viewModel = StampViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -10,7 +12,7 @@ struct StampView: View {
                     .frame(width: 200, height: 200)
                 Spacer()
                 Button(action: {
-                    
+                    viewModel.didScanStamp()
                 }) {
                     ZStack {
                         Color.white
@@ -19,31 +21,67 @@ struct StampView: View {
                         VStack {
                             HStack {
                                 ForEach((1...5), id: \.self) { index in
-                                    Circle()
-                                        .strokeBorder(
-                                            style: StrokeStyle(
-                                                lineWidth: 1,
-                                                dash: [4]
+                                    ZStack {
+                                        Circle()
+                                            .strokeBorder(
+                                                style: StrokeStyle(
+                                                    lineWidth: 1,
+                                                    dash: [4]
+                                                )
                                             )
-                                        )
-                                        .foregroundColor(.gray)
-                                        .frame(width: 48, height: 48)
+                                            .foregroundColor(.gray)
+                                            .frame(width: 48, height: 48)
+                                        if $viewModel.stampCount.wrappedValue.count >= index {
+                                            ZStack {
+                                                Circle()
+                                                    .stroke(
+                                                        style: StrokeStyle(
+                                                            lineWidth: 3
+                                                        )
+                                                    )
+                                                    .foregroundColor(Color("secondary"))
+                                                    .frame(width: 48, height: 48)
+                                                Text($viewModel.stampCount.wrappedValue[index-1].dateStr)
+                                                    .font(.system(size: 11))
+                                                    .fontWeight(.bold)
+                                                    .foregroundColor(Color("secondary"))
+                                            }
+                                        }
+                                    }
                                     Spacer()
                                 }
                             }
                             .padding(.horizontal, 28)
                             Spacer().frame(height: 10)
                             HStack {
-                                ForEach((1...5), id: \.self) { index in
-                                    Circle()
-                                        .strokeBorder(
-                                            style: StrokeStyle(
-                                                lineWidth: 1,
-                                                dash: [4]
+                                ForEach((6...10), id: \.self) { index in
+                                    ZStack {
+                                        Circle()
+                                            .strokeBorder(
+                                                style: StrokeStyle(
+                                                    lineWidth: 1,
+                                                    dash: [4]
+                                                )
                                             )
-                                        )
-                                        .foregroundColor(.gray)
-                                        .frame(width: 48, height: 48)
+                                            .foregroundColor(.gray)
+                                            .frame(width: 48, height: 48)
+                                        if $viewModel.stampCount.wrappedValue.count >= index {
+                                            ZStack {
+                                                Circle()
+                                                    .stroke(
+                                                        style: StrokeStyle(
+                                                            lineWidth: 3
+                                                        )
+                                                    )
+                                                    .foregroundColor(Color("secondary"))
+                                                    .frame(width: 48, height: 48)
+                                                Text($viewModel.stampCount.wrappedValue[index-1].dateStr)
+                                                    .font(.system(size: 11))
+                                                    .fontWeight(.bold)
+                                                    .foregroundColor(Color("secondary"))
+                                            }
+                                        }
+                                    }
                                     Spacer()
                                 }
                             }
@@ -78,15 +116,25 @@ struct StampView: View {
                     .padding(.horizontal, 16)
                     .fixedSize(horizontal: false, vertical: true)
                 }
+                .disabled($viewModel.stampCount.wrappedValue.count >= 10)
                 Spacer().frame(height: 24)
                 Button(action: {
                     
                 }) {
                     ZStack {
-                        Color("primary")
-                            .cornerRadius(6)
+                        if $viewModel.stampCount.wrappedValue.count < 10 {
+                            Color("button_disabled")
+                                .cornerRadius(6)
+                        } else {
+                            Color("primary")
+                                .cornerRadius(6)
+                        }
                         Text("クーポンに引き換える")
-                            .foregroundColor(.white)
+                            .foregroundColor(
+                                $viewModel.stampCount.wrappedValue.count < 10
+                                    ? Color("text_disabled")
+                                    : .white
+                            )
                             .font(.system(size: 14))
                             .fontWeight(.bold)
                             .padding(.vertical, 14)
@@ -94,6 +142,7 @@ struct StampView: View {
                     .frame(height: 48)
                     .padding(.horizontal, 16)
                 }
+                .disabled($viewModel.stampCount.wrappedValue.count < 10)
                 Spacer().frame(height: 20)
             }
             .background(Color("background"))
