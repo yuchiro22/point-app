@@ -68,6 +68,8 @@ struct CouponDetailView: View {
                 .frame(height: 48)
                 .padding(.horizontal, 16)
             }
+            Spacer()
+                .frame(height: 20)
         }
         .background(Color("background"))
         .navigationTitle("クーポン")
