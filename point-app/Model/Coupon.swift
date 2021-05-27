@@ -9,9 +9,8 @@ struct Coupon: Identifiable, Codable {
 }
 
 extension Coupon {
-    static var mockData: [Coupon] {
-        return [
+    static var mockData: Coupon {
+        return
             Coupon(id: 1, title: "コーヒー1杯無料", imagePath: "coupon_mock_1", detailInformation: "※おひとり様1回限り", expiredDateStr: "2020.05.09")
-        ]
     }
 }

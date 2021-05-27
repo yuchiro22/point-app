@@ -9,6 +9,8 @@ final class CouponDetailViewModel: ObservableObject {
     }
     func didTapConfirm() {
         // use coupon function
-        
+        var couponCount = UserDefaults.standard.integer(forKey: "couponCount")
+        couponCount -= 1
+        UserDefaults.standard.set(couponCount, forKey: "couponCount")
     }
 }

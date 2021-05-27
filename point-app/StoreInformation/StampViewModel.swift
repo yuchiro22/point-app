@@ -10,14 +10,8 @@ final class StampViewModel: ObservableObject {
     @Published var stampCount: [StampCountModel] = []
     @Published var isSucceedExchange: Bool = false
 
-//    init() {
-//        stampCount = UserDefaults.standard.integer(forKey: "stampCount")
-//        print(stampCount)
-//    }
-
     func didScanStamp() {
         stampCount.append(StampCountModel(dateStr: "5/11"))
-        //UserDefaults.standard.setValue(stampCount, forKey: "stampCount")
     }
     
     func didTapExchageButton() {
@@ -25,10 +19,13 @@ final class StampViewModel: ObservableObject {
             print("stamp exchange error")
             return
         }
-        // exchange stamp to coupon
         isSucceedExchange = true
         
+        // exchange stamp to coupon function
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            var couponCount = UserDefaults.standard.integer(forKey: "couponCount")
+            couponCount += 1
+            UserDefaults.standard.set(couponCount, forKey: "couponCount")
             self.stampCount.removeAll()
             self.isSucceedExchange = false
         }

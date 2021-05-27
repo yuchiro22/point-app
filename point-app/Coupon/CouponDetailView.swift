@@ -85,6 +85,6 @@ struct CouponDetailView: View {
 
 struct CouponDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CouponDetailView(coupon: .constant(Coupon.mockData[0]))
+        CouponDetailView(coupon: .constant(Coupon.mockData))
     }
 }
