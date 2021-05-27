@@ -32,7 +32,7 @@ struct StampView: View {
                                                 )
                                                 .foregroundColor(.gray)
                                                 .frame(width: 48, height: 48)
-                                            if $viewModel.stampCount.wrappedValue.count >= index {
+                                            if $viewModel.stampArray.wrappedValue.count >= index {
                                                 ZStack {
                                                     Circle()
                                                         .stroke(
@@ -42,7 +42,7 @@ struct StampView: View {
                                                         )
                                                         .foregroundColor(Color("secondary"))
                                                         .frame(width: 48, height: 48)
-                                                    Text($viewModel.stampCount.wrappedValue[index-1].dateStr)
+                                                    Text($viewModel.stampArray.wrappedValue[index-1].dateStr)
                                                         .font(.system(size: 11))
                                                         .fontWeight(.bold)
                                                         .foregroundColor(Color("secondary"))
@@ -66,7 +66,7 @@ struct StampView: View {
                                                 )
                                                 .foregroundColor(.gray)
                                                 .frame(width: 48, height: 48)
-                                            if $viewModel.stampCount.wrappedValue.count >= index {
+                                            if $viewModel.stampArray.wrappedValue.count >= index {
                                                 ZStack {
                                                     Circle()
                                                         .stroke(
@@ -76,7 +76,7 @@ struct StampView: View {
                                                         )
                                                         .foregroundColor(Color("secondary"))
                                                         .frame(width: 48, height: 48)
-                                                    Text($viewModel.stampCount.wrappedValue[index-1].dateStr)
+                                                    Text($viewModel.stampArray.wrappedValue[index-1].dateStr)
                                                         .font(.system(size: 11))
                                                         .fontWeight(.bold)
                                                         .foregroundColor(Color("secondary"))
@@ -117,7 +117,7 @@ struct StampView: View {
                         .padding(.horizontal, 16)
                         .fixedSize(horizontal: false, vertical: true)
                     }
-                    .disabled($viewModel.stampCount.wrappedValue.count >= 10)
+                    .disabled($viewModel.stampArray.wrappedValue.count >= 10)
                     
                     Spacer().frame(height: 24)
                     
@@ -125,7 +125,7 @@ struct StampView: View {
                         viewModel.didTapExchageButton()
                     }) {
                         ZStack {
-                            if $viewModel.stampCount.wrappedValue.count < 10 {
+                            if $viewModel.stampArray.wrappedValue.count < 10 {
                                 Color("button_disabled")
                                     .cornerRadius(6)
                             } else {
@@ -134,7 +134,7 @@ struct StampView: View {
                             }
                             Text("クーポンに引き換える")
                                 .foregroundColor(
-                                    $viewModel.stampCount.wrappedValue.count < 10
+                                    $viewModel.stampArray.wrappedValue.count < 10
                                         ? Color("text_disabled")
                                         : .white
                                 )
@@ -145,7 +145,7 @@ struct StampView: View {
                         .frame(height: 48)
                         .padding(.horizontal, 16)
                     }
-                    .disabled($viewModel.stampCount.wrappedValue.count < 10)
+                    .disabled($viewModel.stampArray.wrappedValue.count < 10)
                     Spacer().frame(height: 20)
                 }
                 .background(Color("background"))
