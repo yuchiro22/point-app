@@ -11,7 +11,7 @@ struct RootTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeView(announcements: Announcement.mockData)
+            HomeView(announcements: Announcement.mockData, topInformation: Information.mockData.first)
                 .tabItem {
                     VStack {
                         Image("tab_home")
