@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct StoreInformationDetailView: View {
+    @ObservedObject private var viewModel = StoreInformationDetailViewModel()
     @Binding var storeInformation: Store
+    
     var body: some View {
         Spacer()
             .frame(height: 12)
@@ -13,7 +15,7 @@ struct StoreInformationDetailView: View {
                     .foregroundColor(Color("text_base"))
                 Spacer()
                 Button(action: {
-
+                    viewModel.didTapOpenMap()
                 }, label: {
                     Text("地図アプリで見る")
                         .font(.system(size: 10))
@@ -22,6 +24,7 @@ struct StoreInformationDetailView: View {
                             Color("primary"),
                             width: 1
                         )
+                        .cornerRadius(4.0)
                 })
                 .frame(width: 96)
             }
@@ -29,7 +32,6 @@ struct StoreInformationDetailView: View {
                 .frame(height: 12)
         }
         .frame(height: 32)
-        .padding(.horizontal, 16)
 
         Image(storeInformation.imagePath)
             .resizable()
@@ -56,7 +58,6 @@ struct StoreInformationDetailView: View {
             Spacer()
                 .frame(height: 12)
         }
-        .padding(.horizontal, 16)
         Group {
             HStack {
                 Text("電話番号")
@@ -75,7 +76,6 @@ struct StoreInformationDetailView: View {
             Spacer()
                 .frame(height: 12)
         }
-        .padding(.horizontal, 16)
         Group {
             HStack {
                 Text("営業日")
@@ -94,7 +94,6 @@ struct StoreInformationDetailView: View {
             Spacer()
                 .frame(height: 12)
         }
-        .padding(.horizontal, 16)
         Group {
             HStack {
                 Text("営業時間")
@@ -113,7 +112,6 @@ struct StoreInformationDetailView: View {
             Spacer()
                 .frame(height: 12)
         }
-        .padding(.horizontal, 16)
         Group {
             HStack {
                 Text("客席数")
@@ -132,8 +130,8 @@ struct StoreInformationDetailView: View {
             Spacer()
                 .frame(height: 12)
         }
-        .padding(.horizontal, 16)
         Spacer()
+            .padding(.horizontal, 16)
             .navigationTitle("店舗情報")
     }
 }
