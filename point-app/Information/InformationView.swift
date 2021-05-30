@@ -9,6 +9,7 @@ struct InformationView: View {
                     
             }
         }
+        .navigationTitle("重要なお知らせ")
     }
 }
 

@@ -9,10 +9,9 @@ struct AnnouncementView: View {
                 Image(announcement.imageUrl)
                     .resizable()
                     .scaledToFill()
-                    .frame(height: 211)
+                    .frame(height: UIScreen.main.bounds.width * 0.56)
                     .clipped()
-                Spacer()
-                    .frame(height: 16)
+                    .padding(.bottom, 16)
                 HStack {
                     Text(announcement.category)
                         .padding(.vertical, 2)
@@ -25,7 +24,8 @@ struct AnnouncementView: View {
                         )
                     Spacer()
                 }
-                .padding(.leading, 16)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 12)
                 HStack {
                     Text(announcement.title)
                         .foregroundColor(Color("text_base"))
@@ -33,24 +33,21 @@ struct AnnouncementView: View {
                         .fontWeight(.bold)
                     Spacer()
                 }
-                .padding(.leading, 16)
-                Spacer()
-                    .frame(height: 8)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 8)
                 Text(announcement.text)
                     .foregroundColor(Color("text_base"))
                     .font(.system(size: 12))
                     .padding(.horizontal, 16)
-                Spacer()
-                    .frame(height: 16)
+                    .padding(.bottom, 16)
                 HStack {
                     Text(announcement.dateStr)
-                        .font(.system(size: 11.5))
-                        .foregroundColor(.gray)
+                        .font(.system(size: 10))
+                        .foregroundColor(Color("text_second"))
                     Spacer()
                 }
-                .padding(.leading, 16)
-                Spacer()
-                    .frame(height: 32)
+                .padding(.horizontal, 16)
+                .padding(.bottom, 32)
             }
             .background(Color.white)
         }

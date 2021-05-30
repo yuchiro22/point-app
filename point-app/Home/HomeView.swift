@@ -54,6 +54,7 @@ struct HomeView: View {
                 }
             }
         }
+        .accentColor(Color("text_base"))
     }
 }
 

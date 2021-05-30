@@ -6,13 +6,13 @@ struct StoreInformationView: View {
         NavigationView {
             List(storeInformation.indices) { index in
                 StoreInformationContentView(storeInfomation: self.$storeInformation[index])
-                //HomeContentView(announcement: self.$announcements[index])
             }
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor(named: "background")
             }
-            .navigationBarTitle("店舗情報", displayMode: .inline)
+            .navigationBarTitle("店舗一覧", displayMode: .inline)
         }
+        .accentColor(Color("text_base"))
     }
 }
 

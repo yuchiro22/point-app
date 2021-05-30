@@ -37,6 +37,7 @@ struct CouponContentView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
             .fixedSize(horizontal: false, vertical: true)
         }
+        
     }
 }
 

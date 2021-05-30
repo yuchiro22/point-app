@@ -15,11 +15,14 @@ struct InformationDetailView: View {
                 }
                 .padding(.vertical, 12)
                 
-                Text(information.title)
-                    .foregroundColor(Color("text_base"))
-                    .font(.system(size: 16))
-                    .fontWeight(.bold)
-                    .padding(.bottom, 20)
+                HStack {
+                    Text(information.title)
+                        .foregroundColor(Color("text_base"))
+                        .font(.system(size: 16))
+                        .fontWeight(.bold)
+                        .padding(.bottom, 20)
+                    Spacer()
+                }
                 
                 Text(information.sentence)
                     .font(.system(size: 12))
