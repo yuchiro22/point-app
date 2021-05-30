@@ -91,7 +91,7 @@
 		50F514A7264B47DA00426365 /* point-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "point-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F514AB264B47DA00426365 /* point_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = point_appUITests.swift; sourceTree = "<group>"; };
 		50F514AD264B47DA00426365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		50F514C3264B49EB00426365 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = SOURCE_ROOT; };
+		50F514C3264B49EB00426365 /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StampView.swift; path = "point-app/Stamp/StampView.swift"; sourceTree = SOURCE_ROOT; };
 		50F514C9264B4A4000426365 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		50F514D5264EC2A500426365 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		50F514DD264EC40400426365 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
