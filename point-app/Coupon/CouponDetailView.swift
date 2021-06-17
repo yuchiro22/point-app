@@ -20,7 +20,6 @@ struct CouponDetailView: View {
                             .font(.system(size: 16))
                         Spacer()
                     }
-                    
                     HStack {
                         Image(systemName: "clock")
                             .resizable()
@@ -73,9 +72,14 @@ struct CouponDetailView: View {
                 Spacer()
                     .frame(height: 20)
             }
+            
             // Dialog
             if $viewModel.isShowingConfirmDialog.wrappedValue {
-                UseCouponConfirmDialog(isShowing: $viewModel.isShowingConfirmDialog)
+                UseCouponConfirmDialog(viewModel: viewModel, isShowing: $viewModel.isShowingConfirmDialog)
+            }
+            // Coupon Use Succeed Dialog
+            if $viewModel.isUseCouponSucceed.wrappedValue {
+                UseCouponSucceedDialog(isShowing: $viewModel.isUseCouponSucceed)
             }
         }
         .background(Color("background"))

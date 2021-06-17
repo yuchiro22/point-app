@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct UseCouponConfirmDialog: View {
-    @ObservedObject private var viewModel = CouponDetailViewModel()
+    @ObservedObject var viewModel: CouponDetailViewModel
     @Binding var isShowing: Bool
     
     var body: some View {
@@ -28,8 +28,8 @@ struct UseCouponConfirmDialog: View {
                 Spacer()
                     .frame(width: 16)
                 Button(action: {
-                    viewModel.didTapConfirm()
                     isShowing.toggle()
+                    viewModel.didTapConfirm()
                 }) {
                     Text("利用する")
                         .font(.system(size: 14))
@@ -54,6 +54,6 @@ struct UseCouponConfirmDialog: View {
 
 struct UseCouponConfirmDialog_Previews: PreviewProvider {
     static var previews: some View {
-        UseCouponConfirmDialog(isShowing: .constant(true))
+        UseCouponConfirmDialog(viewModel: CouponDetailViewModel(), isShowing: .constant(true))
     }
 }

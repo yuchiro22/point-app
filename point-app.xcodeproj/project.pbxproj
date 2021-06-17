@@ -20,6 +20,7 @@
 		506755DA26623664003258D8 /* InformationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506755D926623664003258D8 /* InformationDetailView.swift */; };
 		506755DC26623AA6003258D8 /* InformationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506755DB26623AA6003258D8 /* InformationContentView.swift */; };
 		506755DE26623AD4003258D8 /* InformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506755DD26623AD4003258D8 /* InformationViewModel.swift */; };
+		50763D3C267B8AF10014451E /* UseCouponSucceedDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50763D3B267B8AF10014451E /* UseCouponSucceedDialog.swift */; };
 		50945113265C6FD0009AF6A0 /* CouponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50945112265C6FD0009AF6A0 /* CouponDetailView.swift */; };
 		5094511E265F0CE1009AF6A0 /* ExchangeCouponSucceedDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5094511D265F0CE1009AF6A0 /* ExchangeCouponSucceedDialog.swift */; };
 		50945123265FD00B009AF6A0 /* UseCouponConfirmDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50945122265FD00B009AF6A0 /* UseCouponConfirmDialog.swift */; };
@@ -71,6 +72,7 @@
 		506755D926623664003258D8 /* InformationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailView.swift; sourceTree = "<group>"; };
 		506755DB26623AA6003258D8 /* InformationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationContentView.swift; sourceTree = "<group>"; };
 		506755DD26623AD4003258D8 /* InformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewModel.swift; sourceTree = "<group>"; };
+		50763D3B267B8AF10014451E /* UseCouponSucceedDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCouponSucceedDialog.swift; sourceTree = "<group>"; };
 		50945112265C6FD0009AF6A0 /* CouponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponDetailView.swift; sourceTree = "<group>"; };
 		5094511D265F0CE1009AF6A0 /* ExchangeCouponSucceedDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCouponSucceedDialog.swift; sourceTree = "<group>"; };
 		50945122265FD00B009AF6A0 /* UseCouponConfirmDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCouponConfirmDialog.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				50945112265C6FD0009AF6A0 /* CouponDetailView.swift */,
 				50945127265FD6B9009AF6A0 /* CouponDetailViewModel.swift */,
 				50945122265FD00B009AF6A0 /* UseCouponConfirmDialog.swift */,
+				50763D3B267B8AF10014451E /* UseCouponSucceedDialog.swift */,
 			);
 			path = Coupon;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50763D3C267B8AF10014451E /* UseCouponSucceedDialog.swift in Sources */,
 				506755D326622F3C003258D8 /* Information.swift in Sources */,
 				50945130265FDBE7009AF6A0 /* CouponViewModel.swift in Sources */,
 				506755D6266235B6003258D8 /* InformationView.swift in Sources */,
